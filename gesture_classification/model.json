@@ -1,0 +1,995 @@
+{
+  "format": "tflite",
+  "version": 3,
+  "description": "MLIR Converted.",
+  "op_codes": [
+    "CONV_2D",
+    "MEAN",
+    "FULLY_CONNECTED",
+    "SOFTMAX"
+  ],
+  "subgraphs": [
+    {
+      "name": "main",
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        15
+      ],
+      "tensors": [
+        {
+          "name": "serving_default_input_1:0",
+          "type": "INT8",
+          "shape": [
+            1,
+            32,
+            32,
+            3
+          ],
+          "shape_sig": [
+            -1,
+            32,
+            32,
+            3
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              1.0
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 1,
+          "is_weight": false
+        },
+        {
+          "name": "model/global_average_pooling2d/Mean/reduction_indices",
+          "type": "INT32",
+          "shape": [
+            2
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [],
+            "zero_point": [],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 2,
+          "is_weight": true
+        },
+        {
+          "name": "model/activation/Relu;model/batch_normalization/FusedBatchNormV3;conv2d/bias;model/conv2d/BiasAdd;model/conv2d/Conv2D1",
+          "type": "INT8",
+          "shape": [
+            16,
+            3,
+            3,
+            3
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00020101880363654345,
+              0.0002319453633390367,
+              0.00012452210648916662,
+              0.00019167819118592888,
+              0.0001889891573227942,
+              0.00025688455207273364,
+              8.979917038232088e-05,
+              0.0001081280643120408,
+              0.00010207886225543916,
+              0.00018449251365382224,
+              0.00011486919538583606,
+              0.00035293636028654873,
+              0.00011443417315604165,
+              9.247102570952848e-05,
+              5.965504897176288e-05,
+              0.00013570737792178988
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 3,
+          "is_weight": true
+        },
+        {
+          "name": "model/activation/Relu;model/batch_normalization/FusedBatchNormV3;conv2d/bias;model/conv2d/BiasAdd;model/conv2d/Conv2D",
+          "type": "INT32",
+          "shape": [
+            16
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00020101880363654345,
+              0.0002319453633390367,
+              0.00012452210648916662,
+              0.00019167819118592888,
+              0.0001889891573227942,
+              0.00025688455207273364,
+              8.979917038232088e-05,
+              0.0001081280643120408,
+              0.00010207886225543916,
+              0.00018449251365382224,
+              0.00011486919538583606,
+              0.00035293636028654873,
+              0.00011443417315604165,
+              9.247102570952848e-05,
+              5.965504897176288e-05,
+              0.00013570737792178988
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 4,
+          "is_weight": true
+        },
+        {
+          "name": "model/conv2d_1/Conv2D",
+          "type": "INT8",
+          "shape": [
+            32,
+            3,
+            3,
+            16
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.0014158395351842046,
+              0.0018964732298627496,
+              0.0013224631547927856,
+              0.0013746077893301845,
+              0.0011585786705836654,
+              0.001241976278834045,
+              0.00136876804754138,
+              0.0012001836439594626,
+              0.0008510553743690252,
+              0.0008824740652926266,
+              0.0009654063615016639,
+              0.0012147270608693361,
+              0.0013646089937537909,
+              0.00124060467351228,
+              0.0012493651593104005,
+              0.0011268764501437545,
+              0.001259240903891623,
+              0.0012001835275441408,
+              0.0009783575078472495,
+              0.0005145002505742013,
+              0.0010313556995242834,
+              0.0013695884263142943,
+              0.0009606615640223026,
+              0.0009434398962184787,
+              0.0009081389289349318,
+              0.0013980829389765859,
+              0.0010046657407656312,
+              0.0012610740959644318,
+              0.0007794905686751008,
+              0.0011039272649213672,
+              0.001138366642408073,
+              0.0010391046525910497
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 5,
+          "is_weight": true
+        },
+        {
+          "name": "model/activation_1/Relu;model/batch_normalization_1/FusedBatchNormV3;conv2d_1/bias;model/conv2d_1/BiasAdd;model/conv2d_1/Conv2D",
+          "type": "INT32",
+          "shape": [
+            32
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              7.59397735237144e-05,
+              0.00010171897883992642,
+              7.093144813552499e-05,
+              7.37282753107138e-05,
+              6.214136374182999e-05,
+              6.661446968792006e-05,
+              7.341505261138082e-05,
+              6.437288539018482e-05,
+              4.564708797261119e-05,
+              4.7332257963716984e-05,
+              5.17804037372116e-05,
+              6.515293353004381e-05,
+              7.319197902688757e-05,
+              6.654090248048306e-05,
+              6.70107765472494e-05,
+              6.044099063728936e-05,
+              6.754047353751957e-05,
+              6.43728781142272e-05,
+              5.2475046686595306e-05,
+              2.7595664505497552e-05,
+              5.531765054911375e-05,
+              7.34590576030314e-05,
+              5.1525912567740306e-05,
+              5.0602211558725685e-05,
+              4.870881457463838e-05,
+              7.498737977584824e-05,
+              5.3886113164480776e-05,
+              6.763879355276003e-05,
+              4.180864925729111e-05,
+              5.92100914218463e-05,
+              6.105727516114712e-05,
+              5.573327507590875e-05
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 6,
+          "is_weight": true
+        },
+        {
+          "name": "model/conv2d_2/Conv2D",
+          "type": "INT8",
+          "shape": [
+            64,
+            3,
+            3,
+            32
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.01273384504020214,
+              0.012457922101020813,
+              0.013096705079078674,
+              0.01179127860814333,
+              0.015577704645693302,
+              0.011883849278092384,
+              0.011862777173519135,
+              0.013328900560736656,
+              0.012314866296947002,
+              0.010656249709427357,
+              0.010515138506889343,
+              0.01402733288705349,
+              0.01097814366221428,
+              0.011465241201221943,
+              0.011302340775728226,
+              0.014379454776644707,
+              0.015531126409769058,
+              0.01508655957877636,
+              0.014418275095522404,
+              0.013571047224104404,
+              0.0114519027993083,
+              0.014443613588809967,
+              0.010727166198194027,
+              0.015001915395259857,
+              0.011675607413053513,
+              0.013147611171007156,
+              0.010485430248081684,
+              0.012780215591192245,
+              0.014477976597845554,
+              0.014008000493049622,
+              0.013465660624206066,
+              0.012518116272985935,
+              0.013389328494668007,
+              0.008870046585798264,
+              0.012215557508170605,
+              0.011803223751485348,
+              0.009920844808220863,
+              0.013962688855826855,
+              0.01002261508256197,
+              0.009803080931305885,
+              0.015086059458553791,
+              0.011836937628686428,
+              0.012821676209568977,
+              0.011834602802991867,
+              0.010620574466884136,
+              0.010895900428295135,
+              0.01143591571599245,
+              0.014222280122339725,
+              0.013150307349860668,
+              0.013349603861570358,
+              0.010185127146542072,
+              0.011191518045961857,
+              0.00942645687609911,
+              0.013596445322036743,
+              0.014831272885203362,
+              0.011205798014998436,
+              0.012020372785627842,
+              0.010563898831605911,
+              0.014181612059473991,
+              0.015303583815693855,
+              0.01340763084590435,
+              0.011681502684950829,
+              0.013643080368638039,
+              0.010095054283738136
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 7,
+          "is_weight": true
+        },
+        {
+          "name": "model/activation_2/Relu;model/batch_normalization_2/FusedBatchNormV3;conv2d_2/bias;model/conv2d_2/BiasAdd;model/conv2d_2/Conv2D",
+          "type": "INT32",
+          "shape": [
+            64
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00012813991634175181,
+              0.00012536330905277282,
+              0.00013179135567042977,
+              0.00011865491978824139,
+              0.00015675749455112964,
+              0.00011958645336562768,
+              0.00011937441013287753,
+              0.00013412791304290295,
+              0.00012392376083880663,
+              0.00010723319428507239,
+              0.00010581320384517312,
+              0.00014115619705989957,
+              0.00011047239240724593,
+              0.00011537403042893857,
+              0.00011373477173037827,
+              0.0001446995884180069,
+              0.00015628879191353917,
+              0.00015181514027062804,
+              0.0001450902345823124,
+              0.00013656463124789298,
+              0.00011523980356287211,
+              0.00014534521324094385,
+              0.00010794682748382911,
+              0.00015096337301656604,
+              0.00011749093391699716,
+              0.00013230361219029874,
+              0.00010551424929872155,
+              0.00012860653805546463,
+              0.0001456909958506003,
+              0.00014096166705712676,
+              0.00013550413132179528,
+              0.00012596904707606882,
+              0.00013473600847646594,
+              8.925874135456979e-05,
+              0.00012292442261241376,
+              0.00011877512588398531,
+              9.983286145143211e-05,
+              0.0001405056973453611,
+              0.00010085696703754365,
+              9.864781168289483e-05,
+              0.00015181010530795902,
+              0.00011911438923561946,
+              0.00012902375601697713,
+              0.00011909089516848326,
+              0.00010687419853638858,
+              0.00010964478860842064,
+              0.0001150789248640649,
+              0.0001431179407518357,
+              0.00013233075151219964,
+              0.00013433625281322747,
+              0.00010249231854686514,
+              0.00011261957115493715,
+              9.485786722507328e-05,
+              0.00013682020653504878,
+              0.00014924620336387306,
+              0.00011276326404185966,
+              0.00012096028513042256,
+              0.00010630387259880081,
+              0.00014270869723986834,
+              0.00015399903350044042,
+              0.00013492017751559615,
+              0.0001175502547994256,
+              0.00013728949124924839,
+              0.00010158592340303585
+            ],
+            "zero_point": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 8,
+          "is_weight": true
+        },
+        {
+          "name": "model/dense/MatMul",
+          "type": "INT8",
+          "shape": [
+            10,
+            64
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.011593032628297806
+            ],
+            "zero_point": [
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 9,
+          "is_weight": true
+        },
+        {
+          "name": "dense/bias",
+          "type": "INT32",
+          "shape": [
+            10
+          ],
+          "shape_sig": null,
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00010809163359226659
+            ],
+            "zero_point": [
+              0
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 10,
+          "is_weight": true
+        },
+        {
+          "name": "model/activation/Relu;model/batch_normalization/FusedBatchNormV3;conv2d/bias;model/conv2d/BiasAdd;model/conv2d/Conv2D2",
+          "type": "INT8",
+          "shape": [
+            1,
+            16,
+            16,
+            16
+          ],
+          "shape_sig": [
+            -1,
+            16,
+            16,
+            16
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.0536358617246151
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 11,
+          "is_weight": false
+        },
+        {
+          "name": "model/activation_1/Relu;model/batch_normalization_1/FusedBatchNormV3;conv2d_1/bias;model/conv2d_1/BiasAdd;model/conv2d_1/Conv2D1",
+          "type": "INT8",
+          "shape": [
+            1,
+            8,
+            8,
+            32
+          ],
+          "shape_sig": [
+            -1,
+            8,
+            8,
+            32
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.01006293948739767
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 12,
+          "is_weight": false
+        },
+        {
+          "name": "model/activation_2/Relu;model/batch_normalization_2/FusedBatchNormV3;conv2d_2/bias;model/conv2d_2/BiasAdd;model/conv2d_2/Conv2D1",
+          "type": "INT8",
+          "shape": [
+            1,
+            4,
+            4,
+            64
+          ],
+          "shape_sig": [
+            -1,
+            4,
+            4,
+            64
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.05079137906432152
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 13,
+          "is_weight": false
+        },
+        {
+          "name": "model/global_average_pooling2d/Mean",
+          "type": "INT8",
+          "shape": [
+            1,
+            64
+          ],
+          "shape_sig": [
+            -1,
+            64
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00932384468615055
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 14,
+          "is_weight": false
+        },
+        {
+          "name": "model/dense/MatMul;model/dense/BiasAdd",
+          "type": "INT8",
+          "shape": [
+            1,
+            10
+          ],
+          "shape_sig": [
+            -1,
+            10
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.11232580244541168
+            ],
+            "zero_point": [
+              58
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 15,
+          "is_weight": false
+        },
+        {
+          "name": "StatefulPartitionedCall:0",
+          "type": "INT8",
+          "shape": [
+            1,
+            10
+          ],
+          "shape_sig": [
+            -1,
+            10
+          ],
+          "is_variable": false,
+          "quantization": {
+            "scale": [
+              0.00390625
+            ],
+            "zero_point": [
+              -128
+            ],
+            "quantized_dimension": 0
+          },
+          "buffer_index": 16,
+          "is_weight": false
+        }
+      ],
+      "operators": [
+        {
+          "op": "CONV_2D",
+          "inputs": [
+            0,
+            2,
+            3
+          ],
+          "outputs": [
+            10
+          ]
+        },
+        {
+          "op": "CONV_2D",
+          "inputs": [
+            10,
+            4,
+            5
+          ],
+          "outputs": [
+            11
+          ]
+        },
+        {
+          "op": "CONV_2D",
+          "inputs": [
+            11,
+            6,
+            7
+          ],
+          "outputs": [
+            12
+          ]
+        },
+        {
+          "op": "MEAN",
+          "inputs": [
+            12,
+            1
+          ],
+          "outputs": [
+            13
+          ]
+        },
+        {
+          "op": "FULLY_CONNECTED",
+          "inputs": [
+            13,
+            8,
+            9
+          ],
+          "outputs": [
+            14
+          ]
+        },
+        {
+          "op": "SOFTMAX",
+          "inputs": [
+            14
+          ],
+          "outputs": [
+            15
+          ]
+        }
+      ]
+    }
+  ],
+  "weightsManifest": [
+    {
+      "paths": [
+        "weights.bin"
+      ],
+      "weights": [
+        {
+          "name": "model/global_average_pooling2d/Mean/reduction_indices",
+          "dtype": "int32",
+          "shape": [
+            2
+          ],
+          "byteOffset": 0,
+          "byteLength": 8
+        },
+        {
+          "name": "model/activation/Relu;model/batch_normalization/FusedBatchNormV3;conv2d/bias;model/conv2d/BiasAdd;model/conv2d/Conv2D1",
+          "dtype": "int8",
+          "shape": [
+            16,
+            3,
+            3,
+            3
+          ],
+          "byteOffset": 8,
+          "byteLength": 432
+        },
+        {
+          "name": "model/activation/Relu;model/batch_normalization/FusedBatchNormV3;conv2d/bias;model/conv2d/BiasAdd;model/conv2d/Conv2D",
+          "dtype": "int32",
+          "shape": [
+            16
+          ],
+          "byteOffset": 440,
+          "byteLength": 64
+        },
+        {
+          "name": "model/conv2d_1/Conv2D",
+          "dtype": "int8",
+          "shape": [
+            32,
+            3,
+            3,
+            16
+          ],
+          "byteOffset": 504,
+          "byteLength": 4608
+        },
+        {
+          "name": "model/activation_1/Relu;model/batch_normalization_1/FusedBatchNormV3;conv2d_1/bias;model/conv2d_1/BiasAdd;model/conv2d_1/Conv2D",
+          "dtype": "int32",
+          "shape": [
+            32
+          ],
+          "byteOffset": 5112,
+          "byteLength": 128
+        },
+        {
+          "name": "model/conv2d_2/Conv2D",
+          "dtype": "int8",
+          "shape": [
+            64,
+            3,
+            3,
+            32
+          ],
+          "byteOffset": 5240,
+          "byteLength": 18432
+        },
+        {
+          "name": "model/activation_2/Relu;model/batch_normalization_2/FusedBatchNormV3;conv2d_2/bias;model/conv2d_2/BiasAdd;model/conv2d_2/Conv2D",
+          "dtype": "int32",
+          "shape": [
+            64
+          ],
+          "byteOffset": 23672,
+          "byteLength": 256
+        },
+        {
+          "name": "model/dense/MatMul",
+          "dtype": "int8",
+          "shape": [
+            10,
+            64
+          ],
+          "byteOffset": 23928,
+          "byteLength": 640
+        },
+        {
+          "name": "dense/bias",
+          "dtype": "int32",
+          "shape": [
+            10
+          ],
+          "byteOffset": 24568,
+          "byteLength": 40
+        }
+      ]
+    }
+  ]
+}
